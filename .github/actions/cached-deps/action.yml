@@ -4,7 +4,7 @@ input:
   caching:
     description: 'Whether to cache dependencies or not'
     required: false
-    default: '1'
+    default: 'false'
 runs:
   using: 'composite'
   steps:
