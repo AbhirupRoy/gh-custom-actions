@@ -11,6 +11,9 @@ runs:
     - name: Debug
       run: echo "${{ inputs.caching }}"
       shell: bash
+    - name: Debug
+      run: echo "All inputs- ${{ toJSON(inputs) }}"
+      shell: bash
     - name: Cache dependencies
       if: inputs.caching == 'true'
       id: cache
