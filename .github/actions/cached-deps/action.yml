@@ -1,10 +1,10 @@
 name: 'Get & Cache Dependencies'
 description: 'Get the dependencies (via npm) and cache them.'
-input:
+inputs:
   caching:
     description: 'Whether to cache dependencies or not'
     required: false
-    default: 'false'
+    default: 'true'
 runs:
   using: 'composite'
   steps:
