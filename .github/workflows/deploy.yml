@@ -63,7 +63,7 @@ jobs:
       - name: Output contents
         run: ls
       - name: Deploy site Javascript
-        id: deploy
+        id: deploy1
         # run: echo "Deploying..."
         uses: ./.github/actions/deploy-s3-javascript
         env:
@@ -75,9 +75,9 @@ jobs:
           # bucket-region: us-east-2
       - name: Output information
         run: |
-          echo "Live URL: ${{ steps.deploy.outputs.website-url }}"
+          echo "Live URL: ${{ steps.deploy1.outputs.website-url }}"
       - name: Deploy site docker
-        id: deploy
+        id: deploy2
         # run: echo "Deploying..."
         uses: ./.github/actions/deploy-s3-docker
         env:
@@ -89,7 +89,7 @@ jobs:
           # bucket-region: us-east-2
       - name: Output information
         run: |
-          echo "Live URL: ${{ steps.deploy.outputs.website-url }}"
+          echo "Live URL: ${{ steps.deploy2.outputs.website-url }}"
 
   # information:
   #   runs-on: ubuntu-latest
