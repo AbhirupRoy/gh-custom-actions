@@ -9,7 +9,7 @@ inputs:
     required: false
     default: 'us-east-1'
   dist-folder:
-    description; 'The folder containing the deployment files'
+    description: 'The folder containing the deployment files'
     required: true
 outputs:
   website-url:
